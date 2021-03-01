@@ -11,7 +11,11 @@ function App(props) {
         <BrowserRouter>
             <div className="App-wrapper">
                 <Navbar/>
-                <Route path='/dialogs' render={ () => <Dialogs dialogsNavbarData={props.dialogsNavbarData}/>}/>
+                <Route path='/dialogs' render={ () =>
+                    <Dialogs dialogsNavbarData={props.dialogsNavbarData}
+                             dialogsMessagesIncomingData={props.dialogsMessagesIncomingData}
+                             dialogsMessagesOutgoingData={props.dialogsMessagesOutgoingData}
+                    />}/>
                 <Route path='/profile' render={ () => <Profile postsData={props.postsData}/>}/>
                 <Route path='/faq' render={ () => <Faq/>}/>
             </div>

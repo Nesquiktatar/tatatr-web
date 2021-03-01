@@ -3,15 +3,19 @@ import s from './Dialog.module.css';
 import LeftBox from "./LeftBox/LeftBox";
 import RightBox from "./RightBox/RightBox";
 
-const Dialog = () => {
+const Dialog = (props) => {
+
+    let incomingMessages = props.dialogsMessagesIncomingData.map (
+        m => <LeftBox id={m.id} message={m.message}/>
+    )
+    let outgoingMessages = props.dialogsMessagesOutgoingData.map (
+        m => <RightBox id={m.id} message={m.message}/>
+    )
+
     return(
         <div className={s.wrapper}>
-            <LeftBox message='Hello LEFT! This is a test message to show how to make an arrow on the side of the box.'/>
-            <RightBox message='Hello RIGHT! This is a test message to show how to make an arrow on the side of the box.'/>
-            <LeftBox message='Hello LEFT! This is a test message to show how to make an arrow on the side of the box.'/>
-            <RightBox message='Hello RIGHT! This is a test message to show how to make an arrow on the side of the box.'/>
-            <RightBox message='Hello RIGHT! This is a test message to show how to make an arrow on the side of the box.'/>
-            <RightBox message='Hello RIGHT! This is a test message to show how to make an arrow on the side of the box.'/>
+            <div className={s.left}>{incomingMessages}</div>
+            <div className={s.right}>{outgoingMessages}</div>
         </div>
     )
 }

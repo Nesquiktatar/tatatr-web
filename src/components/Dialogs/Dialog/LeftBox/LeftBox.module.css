@@ -2,6 +2,7 @@
     clear: both;
     position: relative;
     grid-column-start: 1;
+    padding-top: 5%;
 }
 
 .container .arrow {

@@ -20,11 +20,25 @@ let postsData = [
     {id: 4, message: '4 post', likesCount: '44', userPhoto: userPhoto}
 ]
 
+let dialogsMessagesIncomingData = [
+    {id:1, message:'Hello!'},
+    {id:2, message:'How are you?!'},
+    {id:3, message:'You should saw that movie dude!'}
+]
+
+let dialogsMessagesOutgoingData = [
+    {id:1, message:'Wazzzup!'},
+    {id:2, message:'Cool. What about you?'},
+    {id:3, message:'Okay, I will do it!'}
+]
+
 
 ReactDOM.render(
     <React.StrictMode>
         <App dialogsNavbarData={dialogsNavbarData}
             postsData={postsData}
+             dialogsMessagesIncomingData={dialogsMessagesIncomingData}
+             dialogsMessagesOutgoingData={dialogsMessagesOutgoingData}
         />
     </React.StrictMode>,
     document.getElementById('root')

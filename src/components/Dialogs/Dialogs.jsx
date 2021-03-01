@@ -17,7 +17,10 @@ const Dialogs = (props) => {
                 {dialogsNavbarElements}
                 <button>next</button>
             </div>
-            <Dialog/>
+            <Dialog
+                dialogsMessagesIncomingData={props.dialogsMessagesIncomingData}
+                dialogsMessagesOutgoingData={props.dialogsMessagesOutgoingData}
+            />
             <textarea name="dialogsInput" id="dialogsInput" cols="30" rows="15"
                       placeholder='enter your message'/>
             <button>SEND</button>

@@ -14,7 +14,7 @@ class LikeButton extends React.Component {
             liked: !this.state.liked
         });
     }
-
+g
     render() {
         // const text = this.state.liked ? 'liked' : 'haven\'t liked';
         const label = this.state.liked ? 'Unlike' : 'Like'
