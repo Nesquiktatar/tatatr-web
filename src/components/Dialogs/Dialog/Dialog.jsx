@@ -5,10 +5,10 @@ import RightBox from "./RightBox/RightBox";
 
 const Dialog = (props) => {
 
-    let incomingMessages = props.dialogsMessagesIncomingData.map (
+    let incomingMessages = props.incoming.map (
         m => <LeftBox id={m.id} message={m.message}/>
     )
-    let outgoingMessages = props.dialogsMessagesOutgoingData.map (
+    let outgoingMessages = props.outgoing.map (
         m => <RightBox id={m.id} message={m.message}/>
     )
 

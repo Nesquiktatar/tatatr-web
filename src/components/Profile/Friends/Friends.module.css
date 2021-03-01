@@ -1,0 +1,10 @@
+.wrapper {
+    color: #557174;
+    font-family: "Comic Sans MS";
+    font-size: x-large;
+}
+
+.item {
+    grid-row-start: 2;
+    background-color: #557174;
+}

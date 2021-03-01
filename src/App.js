@@ -12,11 +12,9 @@ function App(props) {
             <div className="App-wrapper">
                 <Navbar/>
                 <Route path='/dialogs' render={ () =>
-                    <Dialogs dialogsNavbarData={props.dialogsNavbarData}
-                             dialogsMessagesIncomingData={props.dialogsMessagesIncomingData}
-                             dialogsMessagesOutgoingData={props.dialogsMessagesOutgoingData}
+                    <Dialogs dialogsPage={props.state.dialogsPage}
                     />}/>
-                <Route path='/profile' render={ () => <Profile postsData={props.postsData}/>}/>
+                <Route path='/profile' render={ () => <Profile profilePage={props.state.profilePage}/>}/>
                 <Route path='/faq' render={ () => <Faq/>}/>
             </div>
         </BrowserRouter>

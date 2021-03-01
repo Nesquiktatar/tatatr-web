@@ -6,7 +6,7 @@ import DialogsNavbar from "./DialogsNavbar/DialogsNavbar";
 
 const Dialogs = (props) => {
 
-    let dialogsNavbarElements = props.dialogsNavbarData.map(dialog =>
+    let dialogsNavbarElements = props.dialogsPage.dialogsNavbarData.map(dialog =>
         <DialogsNavbar id={dialog.id} name={dialog.name} userPhoto={dialog.photo}/>)
 
 
@@ -18,8 +18,8 @@ const Dialogs = (props) => {
                 <button>next</button>
             </div>
             <Dialog
-                dialogsMessagesIncomingData={props.dialogsMessagesIncomingData}
-                dialogsMessagesOutgoingData={props.dialogsMessagesOutgoingData}
+               incoming={props.dialogsPage.dialogsMessagesIncomingData}
+               outgoing={props.dialogsPage.dialogsMessagesOutgoingData}
             />
             <textarea name="dialogsInput" id="dialogsInput" cols="30" rows="15"
                       placeholder='enter your message'/>

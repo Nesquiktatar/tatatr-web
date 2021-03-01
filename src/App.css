@@ -1,7 +1,7 @@
 .App-wrapper{
   display: grid;
   grid-template-columns: 10% 80% 10%;
-  height: 100vh;
   grid-template-rows: 10% 90%;
+  height: 100%;
 }
 
