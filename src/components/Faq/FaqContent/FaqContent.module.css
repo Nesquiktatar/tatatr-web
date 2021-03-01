@@ -1,0 +1,18 @@
+.FaqContentWrapper {
+    background-color: blue;
+    }
+
+.question{
+    color: #557174;
+    text-align: left;
+    text-decoration: underline;
+    border: 4px double #c7cfb7;
+    padding-left: 10%;
+}
+
+.answer {
+    color: #9dad7f;
+    text-decoration: none;
+    text-align: center;
+
+}

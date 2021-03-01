@@ -1,0 +1,26 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    background-color: #c7cfb7;
+    grid-column-start: 2;
+    max-height: 74px;
+    grid-row-start: 1;
+    text-align: center;
+}
+
+.item {
+    font-size: 40px;
+    font-family: "Agency FB";
+    color: #557174;
+    padding-left: 10%;
+}
+
+a{
+    color: #557174;
+    text-decoration: none;
+}
+
+div .active {
+    color: #9dad7f;
+    font-weight: 900;
+}

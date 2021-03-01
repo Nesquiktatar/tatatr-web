@@ -1,0 +1,14 @@
+.wrapper {
+    height: 100%;
+    background-color: #c7cfb7;
+}
+
+.item {
+    grid-column-end: 3;
+}
+
+.wrapper > h3 {
+    padding-left: 50px;
+}
+
+

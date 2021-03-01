@@ -1,0 +1,14 @@
+.wrapper {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 15% 70% 10% 5%;
+}
+
+
+
+.iconsWrapper{
+    background-color: #c7cfb7;
+    display: grid;
+    grid-template-columns:10% repeat(5, 16%) 10%;
+}
+
