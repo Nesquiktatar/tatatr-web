@@ -17,7 +17,11 @@ const Profile = (props) => {
                 <Friends friendsData={props.profilePage.friendsData}/>
             </div>
             <div className={s.myPosts}>
-                <MyPosts postsData={props.profilePage.postsData}/>
+                <MyPosts postsData={props.profilePage.postsData}
+                         addPost={props.addPost}
+                         newPostText={props.profilePage.newPostText}
+                         updateNewPostText={props.updateNewPostText}
+                    />
             </div>
 
         </div>

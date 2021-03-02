@@ -9,6 +9,16 @@ const Dialogs = (props) => {
     let dialogsNavbarElements = props.dialogsPage.dialogsNavbarData.map(dialog =>
         <DialogsNavbar id={dialog.id} name={dialog.name} userPhoto={dialog.photo}/>)
 
+    let newMessageElement = React.createRef();
+
+    let sendMessage = () => {
+        props.addMessage();
+    }
+
+    let onMessageChange = () => {
+        let message = newMessageElement.current.value;
+        props.updateNewMessageText(message);
+    }
 
     return (
         <div className={s.wrapper}>
@@ -22,8 +32,10 @@ const Dialogs = (props) => {
                outgoing={props.dialogsPage.dialogsMessagesOutgoingData}
             />
             <textarea name="dialogsInput" id="dialogsInput" cols="30" rows="15"
-                      placeholder='enter your message'/>
-            <button>SEND</button>
+                      placeholder='enter your message' ref={newMessageElement}
+                      value={props.dialogsPage.newPostText} onChange={onMessageChange}
+            />
+            <button onClick={() => {sendMessage()}}>SEND</button>
         </div>
     )
 }
