@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import Dialog from "./Dialog/Dialog";
 import DialogsNavbar from "./DialogsNavbar/DialogsNavbar";
-
+import {sendMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
 
@@ -12,12 +12,12 @@ const Dialogs = (props) => {
     let newMessageElement = React.createRef();
 
     let sendMessage = () => {
-        props.addMessage();
+        props.dispatch(sendMessageActionCreator());
     }
 
     let onMessageChange = () => {
         let message = newMessageElement.current.value;
-        props.updateNewMessageText(message);
+        props.dispatch(updateNewMessageTextActionCreator(message));
     }
 
     return (
@@ -28,14 +28,17 @@ const Dialogs = (props) => {
                 <button>next</button>
             </div>
             <Dialog
-               incoming={props.dialogsPage.dialogsMessagesIncomingData}
-               outgoing={props.dialogsPage.dialogsMessagesOutgoingData}
+                incoming={props.dialogsPage.dialogsMessagesIncomingData}
+                outgoing={props.dialogsPage.dialogsMessagesOutgoingData}
             />
             <textarea name="dialogsInput" id="dialogsInput" cols="30" rows="15"
                       placeholder='enter your message' ref={newMessageElement}
-                      value={props.dialogsPage.newPostText} onChange={onMessageChange}
+                      value={props.dialogsPage.newMessageText} onChange={onMessageChange}
             />
-            <button onClick={() => {sendMessage()}}>SEND</button>
+            <button onClick={() => {
+                sendMessage()
+            }}>SEND
+            </button>
         </div>
     )
 }

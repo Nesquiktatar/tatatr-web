@@ -8,3 +8,5 @@ c7cfb7
 npx create-react-app my-app
 
 npm install react-router-dom --save
+
+npm install redux --save
