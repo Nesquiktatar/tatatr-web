@@ -10,3 +10,11 @@ npx create-react-app my-app
 npm install react-router-dom --save
 
 npm install redux --save
+// предоставляет возможность создать store
+
+npm install --save-dev @babel/plugin-proposal-class-properties
+
+npm install --save-dev @babel/plugin-syntax-class-properties
+
+npx babel-upgrade --write --install 
+

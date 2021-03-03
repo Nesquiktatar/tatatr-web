@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './DialogsNavbar.module.css';
 import {NavLink} from "react-router-dom";
-import userPhoto from "../../../assets/user.svg";
 
 const DialogsNavbar = (props) => {
     return(

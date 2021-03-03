@@ -1,10 +1,12 @@
 import React from 'react';
 import s from './Profile.module.css';
-import MyPosts from "./Myposts/MyPosts";
 import userPhoto from '../../assets/user.svg';
 import Friends from "./Friends/Friends";
+import MyPostsContainer from "./Myposts/MyPostsContainer";
 
 const Profile = (props) => {
+    let state=props.store.getState().profilePage;
+
     return (
         <div className={s.wrapper}>
             <div className={s.item}>
@@ -14,12 +16,11 @@ const Profile = (props) => {
                 userInfo
             </div>
             <div className={s.item}>
-                <Friends friendsData={props.profilePage.friendsData}/>
+                <Friends friendsData={state.friendsData}/>
             </div>
             <div className={s.myPosts}>
-                <MyPosts postsData={props.profilePage.postsData}
-                         newPostText={props.profilePage.newPostText}
-                         dispatch={props.dispatch}
+                <MyPostsContainer state={state}
+                                  store={props.store}
                     />
             </div>
 
